@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Test your financial literacy with our 10-question quiz covering budgeting, saving, investing, and more." />
+  <title>Financial Literacy Quiz — FinWise</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .962L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+      <span class="navbar__logo-text">FinWise</span>
+    </a>
+    <nav class="navbar__links">
+      <a href="index.html"     class="navbar__link">Home</a>
+      <a href="learn.html"     class="navbar__link">Learn</a>
+      <a href="tools.html"     class="navbar__link">Tools</a>
+      <a href="quiz.html"      class="navbar__link">Quiz</a>
+      <a href="resources.html" class="navbar__link">Resources</a>
+      <a href="about.html"     class="navbar__link">About</a>
+      <a href="learn.html" class="btn btn--primary btn--sm navbar__cta">Start Learning</a>
+    </nav>
+    <button class="navbar__mobile-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span id="nav-icon-menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1.5rem;height:1.5rem"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></span>
+      <span id="nav-icon-close" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1.5rem;height:1.5rem"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
+    </button>
+  </div>
+  <div class="navbar__mobile-menu" id="nav-mobile-menu">
+    <div class="navbar__mobile-links">
+      <a href="index.html"     class="navbar__mobile-link">Home</a>
+      <a href="learn.html"     class="navbar__mobile-link">Learn</a>
+      <a href="tools.html"     class="navbar__mobile-link">Tools</a>
+      <a href="quiz.html"      class="navbar__mobile-link">Quiz</a>
+      <a href="resources.html" class="navbar__mobile-link">Resources</a>
+      <a href="about.html"     class="navbar__mobile-link">About</a>
+      <a href="learn.html" class="btn btn--primary btn--full navbar__mobile-cta">Start Learning</a>
+    </div>
+  </div>
+</header>
+
+<main class="page-bg">
+  <div class="container quiz-page">
+    <h1 style="font-size:clamp(1.75rem,4vw,2.25rem);font-weight:900;margin-bottom:2rem">Financial Literacy Quiz</h1>
+    <!-- JS renders the entire quiz here -->
+    <div id="quiz-container" style="max-width:720px;margin:0 auto"></div>
+  </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .962L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+          <span class="footer__logo-text">FinWise</span>
+        </a>
+        <p class="footer__tagline">FinWise was created to improve financial literacy among students by making money education accessible, practical, and engaging.</p>
+      </div>
+      <div>
+        <h3 class="footer__heading">Platform</h3>
+        <ul class="footer__links">
+          <li><a href="learn.html">Learn Finance</a></li>
+          <li><a href="tools.html">Calculators</a></li>
+          <li><a href="quiz.html">Take the Quiz</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__heading">Company</h3>
+        <ul class="footer__links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span id="footer-year"></span> FinWise. All rights reserved.</p>
+      <p>Educational purposes only. Not financial advice.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

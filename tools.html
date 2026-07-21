@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Free financial calculators: budget calculator, compound interest calculator, and savings goal planner." />
+  <title>Financial Tools — FinWise</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a href="index.html" class="navbar__logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .962L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+      <span class="navbar__logo-text">FinWise</span>
+    </a>
+    <nav class="navbar__links">
+      <a href="index.html"     class="navbar__link">Home</a>
+      <a href="learn.html"     class="navbar__link">Learn</a>
+      <a href="tools.html"     class="navbar__link">Tools</a>
+      <a href="quiz.html"      class="navbar__link">Quiz</a>
+      <a href="resources.html" class="navbar__link">Resources</a>
+      <a href="about.html"     class="navbar__link">About</a>
+      <a href="learn.html" class="btn btn--primary btn--sm navbar__cta">Start Learning</a>
+    </nav>
+    <button class="navbar__mobile-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span id="nav-icon-menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1.5rem;height:1.5rem"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg></span>
+      <span id="nav-icon-close" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1.5rem;height:1.5rem"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
+    </button>
+  </div>
+  <div class="navbar__mobile-menu" id="nav-mobile-menu">
+    <div class="navbar__mobile-links">
+      <a href="index.html"     class="navbar__mobile-link">Home</a>
+      <a href="learn.html"     class="navbar__mobile-link">Learn</a>
+      <a href="tools.html"     class="navbar__mobile-link">Tools</a>
+      <a href="quiz.html"      class="navbar__mobile-link">Quiz</a>
+      <a href="resources.html" class="navbar__mobile-link">Resources</a>
+      <a href="about.html"     class="navbar__mobile-link">About</a>
+      <a href="learn.html" class="btn btn--primary btn--full navbar__mobile-cta">Start Learning</a>
+    </div>
+  </div>
+</header>
+
+<main class="page-bg">
+  <div class="container" style="padding-bottom:4rem">
+
+    <div class="page-header">
+      <div class="tools-header">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+        <h1>Financial Tools</h1>
+      </div>
+      <p>Interactive calculators to help you plan, project, and manage your money. All calculations happen instantly as you type.</p>
+    </div>
+
+    <!-- ============ TABS ============ -->
+    <div id="tools-tabs">
+      <div class="tabs-list tabs-list--3">
+        <button class="tab-btn active--violet" data-tab="budget" data-color="violet">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1rem;height:1rem"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+          <span class="tab-label-full">Budget Calculator</span>
+          <span class="tab-label-short">Budget</span>
+        </button>
+        <button class="tab-btn" data-tab="compound" data-color="amber">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1rem;height:1rem"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          <span class="tab-label-full">Compound Interest</span>
+          <span class="tab-label-short">Growth</span>
+        </button>
+        <button class="tab-btn" data-tab="savings" data-color="green">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1rem;height:1rem"><path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2V5z"/><path d="M2 9v1a2 2 0 0 0 2 2h1"/><path d="M16 11h.01"/></svg>
+          <span class="tab-label-full">Savings Goal</span>
+          <span class="tab-label-short">Goal</span>
+        </button>
+      </div>
+
+      <!-- ======= BUDGET CALCULATOR ======= -->
+      <div class="tab-panel active" id="tab-budget">
+        <div class="card calc-card">
+          <div class="calc-card__top-bar calc-card__top-bar--violet"></div>
+          <div class="calc-card-header">
+            <h2>Budget Calculator</h2>
+            <p>Enter your monthly income and expenses to see where your money is going.</p>
+          </div>
+          <div class="calc-card-body">
+            <div class="calc-grid-wide">
+
+              <!-- Inputs -->
+              <div>
+                <div class="input-group">
+                  <label for="b-income" style="color:var(--primary);font-weight:700">Monthly After-Tax Income</label>
+                  <div class="input-wrap">
+                    <span class="input-prefix">$</span>
+                    <input id="b-income" type="number" class="input input--dollar input--lg" value="2000" min="0" />
+                  </div>
+                </div>
+
+                <div style="border-top:1px solid var(--border);padding-top:1.25rem;margin-top:0.5rem">
+                  <p style="font-weight:600;margin-bottom:1rem">Monthly Expenses</p>
+
+                  <div style="display:grid;grid-template-columns:1fr 2fr;gap:0.75rem 1rem;align-items:center">
+                    <label for="b-housing"       class="text-sm text-muted" style="text-align:right">Housing</label>
+                    <div class="input-wrap"><span class="input-prefix">$</span><input id="b-housing"       type="number" class="input input--dollar" value="600"  min="0" style="background:var(--muted)" /></div>
+                    <label for="b-food"          class="text-sm text-muted" style="text-align:right">Food &amp; Groceries</label>
+                    <div class="input-wrap"><span class="input-prefix">$</span><input id="b-food"          type="number" class="input input--dollar" value="400"  min="0" style="background:var(--muted)" /></div>
+                    <label for="b-transport"     class="text-sm text-muted" style="text-align:right">Transportation</label>
+                    <div class="input-wrap"><span class="input-prefix">$</span><input id="b-transport"     type="number" class="input input--dollar" value="200"  min="0" style="background:var(--muted)" /></div>
+                    <label for="b-entertainment" class="text-sm text-muted" style="text-align:right">Entertainment</label>
+                    <div class="input-wrap"><span class="input-prefix">$</span><input id="b-entertainment" type="number" class="input input--dollar" value="300"  min="0" style="background:var(--muted)" /></div>
+                    <label for="b-other"         class="text-sm text-muted" style="text-align:right">Other</label>
+                    <div class="input-wrap"><span class="input-prefix">$</span><input id="b-other"         type="number" class="input input--dollar" value="100"  min="0" style="background:var(--muted)" /></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Summary -->
+              <div class="budget-summary">
+                <h3>Your Monthly Summary</h3>
+                <div class="summary-tiles">
+                  <div class="summary-tile">
+                    <p>Total Expenses</p>
+                    <div class="tile-value" id="b-total-expenses">$1,600</div>
+                  </div>
+                  <div class="summary-tile summary-tile--green" id="b-remaining-tile">
+                    <p>Remaining (Savings)</p>
+                    <div class="tile-value" id="b-remaining">$400</div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="savings-rate-row">
+                    <span>Savings Rate: <strong id="b-savings-rate">20%</strong></span>
+                    <span class="text-muted">Target: 20%</span>
+                  </div>
+                  <div class="progress-wrap progress-wrap--md">
+                    <div class="progress-bar progress-bar--green" id="b-progress-bar" style="width:20%"></div>
+                  </div>
+                  <p class="savings-note" id="b-note">Great job! You are saving 20% or more of your income.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======= COMPOUND INTEREST ======= -->
+      <div class="tab-panel" id="tab-compound">
+        <div class="card calc-card">
+          <div class="calc-card__top-bar calc-card__top-bar--amber"></div>
+          <div class="calc-card-header">
+            <h2>Compound Interest Calculator</h2>
+            <p>See how investing small amounts consistently can grow into massive wealth over time.</p>
+          </div>
+          <div class="calc-card-body">
+            <div class="calc-grid-wide">
+
+              <!-- Inputs -->
+              <div>
+                <div class="input-group">
+                  <label for="c-principal">Starting Amount</label>
+                  <div class="input-wrap"><span class="input-prefix">$</span>
+                    <input id="c-principal" type="number" class="input input--dollar" value="1000" min="0" />
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="c-monthly">Monthly Contribution</label>
+                  <div class="input-wrap"><span class="input-prefix">$</span>
+                    <input id="c-monthly" type="number" class="input input--dollar" value="200" min="0" />
+                  </div>
+                </div>
+                <div class="input-group">
+                  <div class="slider-row">
+                    <label for="c-rate">Expected Return Rate</label>
+                    <span id="c-rate-label" style="color:var(--accent-dark);font-weight:700">7%</span>
+                  </div>
+                  <input id="c-rate" type="range" min="1" max="15" step="0.5" value="7" />
+                  <p class="slider-note">The S&P 500 averages ~7–10% historically.</p>
+                </div>
+                <div class="input-group">
+                  <div class="slider-row">
+                    <label for="c-years">Years to Grow</label>
+                    <span id="c-years-label" style="color:var(--accent-dark);font-weight:700">10 years</span>
+                  </div>
+                  <input id="c-years" type="range" min="1" max="50" step="1" value="10" />
+                </div>
+              </div>
+
+              <!-- Chart side -->
+              <div>
+                <div class="compound-result">
+                  <p>Future Value in <span id="c-years-display">10</span> years</p>
+                  <div class="future-value" id="c-future-value">$38,697</div>
+                  <p class="contribution-note">
+                    You contributed <strong id="c-contributed">$25,000</strong> and earned
+                    <span class="interest-amount" id="c-interest-earned">$13,697</span> in interest.
+                  </p>
+                </div>
+                <div class="chart-container">
+                  <canvas id="compound-chart"></canvas>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ======= SAVINGS GOAL ======= -->
+      <div class="tab-panel" id="tab-savings">
+        <div class="card calc-card">
+          <div class="calc-card__top-bar calc-card__top-bar--emerald"></div>
+          <div class="calc-card-header">
+            <h2>Savings Goal Calculator</h2>
+            <p>Find out exactly how long it will take to reach your financial target.</p>
+          </div>
+          <div class="calc-card-body">
+            <div class="calc-grid-inputs">
+
+              <!-- Inputs -->
+              <div>
+                <div class="input-group">
+                  <label for="s-goal">Goal Amount</label>
+                  <div class="input-wrap"><span class="input-prefix">$</span>
+                    <input id="s-goal" type="number" class="input input--dollar input--lg" value="5000" min="0" />
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="s-current">Current Savings</label>
+                  <div class="input-wrap"><span class="input-prefix">$</span>
+                    <input id="s-current" type="number" class="input input--dollar" value="1000" min="0" />
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="s-monthly">Monthly Contribution</label>
+                  <div class="input-wrap"><span class="input-prefix">$</span>
+                    <input id="s-monthly" type="number" class="input input--dollar" value="250" min="0" style="border-color:rgba(16,185,129,0.4);background:rgba(16,185,129,0.04)" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Result -->
+              <div class="savings-result">
+                <div id="s-time-result">
+                  <p class="preamble">You will reach your goal in</p>
+                  <div class="months-value">
+                    <span id="s-months">16</span>
+                    <span class="unit">months</span>
+                  </div>
+                  <p class="years-note">(about <span id="s-years">1.3</span> years)</p>
+                </div>
+                <div id="s-goal-reached" style="display:none" class="goal-reached"></div>
+
+                <div>
+                  <div class="progress-labels">
+                    <span id="s-current-label">$1,000</span>
+                    <span id="s-goal-label">$5,000</span>
+                  </div>
+                  <div class="progress-wrap progress-wrap--lg">
+                    <div class="progress-bar progress-bar--green" id="s-progress-bar" style="width:20%"></div>
+                  </div>
+                  <p class="progress-pct" id="s-pct">20% Complete</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /#tools-tabs -->
+  </div>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.582a.5.5 0 0 1 0 .962L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+          <span class="footer__logo-text">FinWise</span>
+        </a>
+        <p class="footer__tagline">FinWise was created to improve financial literacy among students by making money education accessible, practical, and engaging.</p>
+      </div>
+      <div>
+        <h3 class="footer__heading">Platform</h3>
+        <ul class="footer__links">
+          <li><a href="learn.html">Learn Finance</a></li>
+          <li><a href="tools.html">Calculators</a></li>
+          <li><a href="quiz.html">Take the Quiz</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer__heading">Company</h3>
+        <ul class="footer__links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span id="footer-year"></span> FinWise. All rights reserved.</p>
+      <p>Educational purposes only. Not financial advice.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Chart.js CDN for compound interest chart -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+<script src="script.js"></script>
+<script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
